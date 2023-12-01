@@ -1,0 +1,75 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="./Estilos/style.css">
+</head>
+<body>
+<div class="container-geral-4">
+
+		<h1>Cadastro de Usuário</h1>
+
+		<div class="container-porta-cards-cad">
+
+			<div class="inputs-cadastro">
+
+				<form action="gravarCliente.jsp?editar=no" method="POST">
+					<h3>Nome</h3>
+					<input type="text" id="nome" name="nome"
+						placeholder="Informe o nome">
+					<h3>Email</h3>
+					<input type="text" id="email" name="email" placeholder="Informe o Email">
+					<h3>Senha</h3>
+					<input type="text" id="senha" name="senha"
+						placeholder="Informe a senha">
+					<h3>Perfil</h3>	
+					<input type="text" name="Perfil" placeholder="Selecione o Perfil"
+					onfocus="dropDown(0)" onblur="dropDown(1)">
+					<div class="menuDropDown">
+						<div class="listDropDown">
+							<div class="item" id="item-1" onMouseDown="category(1)">Administrador</div>
+							<div class="item" id="item-2" onmousedown="category(2)">Operador</div>
+							<div class="item" id="item-3" onmousedown="category(3)">Caixa</div>
+							<div class="item" id="item-4" onmousedown="category(4)">Diretoria</div>
+						</div>
+					</div>
+						
+					<hr>
+					<button onclick="Validar()">Salvar</button>
+
+				</form>
+				<hr>
+				
+			</div>
+
+		</div>
+
+	</div>
+</body>
+<script>
+	
+	function category(c){
+		var item = document.getElementById('item-' + c).innerHTML;
+		document.getElementsByTagName('input')[3].value = item;
+	}
+	
+	function dropDown(p){
+		
+		var e = document.getElementsByClassName('menuDropDown')[0];
+		var d = ['block','none'];
+
+		e.style.display = d[p];
+
+		var t = ['0px','0px,-10px'];
+
+		setTimeout(function(){
+			e.style.transform = 'translate('+t[p]+')';
+		},300);
+	}
+		
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Users\paula\OneDrive\Área de Trabalho\LoginAutenticacao\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1155780341.index
+3335176528.index
+1439746740.index
+380806128.index
+1024043235.index
+3797274205.index
